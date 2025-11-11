@@ -1,40 +1,39 @@
-/* ------------------------------
-   General Styles
---------------------------------*/
-* {
-    box-sizing: border-box;
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff8f0;
+    color: #333;
+    line-height: 1.6;
 }
 
-body {
-    line-height: 1.6;
-    background-color: #fffbea; /* soft, friendly background */
+a {
+    text-decoration: none;
     color: #333;
 }
 
-/* ------------------------------
-   Header
---------------------------------*/
+a:hover {
+    color: #ff7f50;
+}
+
+/* Header & Navigation */
 header {
-    background-color: #ffefd5; /* soft pastel peach */
-    padding: 20px;
+    background: #ffdaae;
+    padding: 20px 10px;
     text-align: center;
-    border-bottom: 2px solid #ffd700; /* golden border */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 header img {
-    width: 80px;
+    width: 150px;
     display: block;
     margin: 0 auto 10px auto;
-    border-radius: 50%;
 }
 
 header h1 {
+    margin: 0;
     font-size: 2em;
-    margin-bottom: 10px;
-    color: #ff7f50; /* coral color for friendly vibe */
 }
 
 nav {
@@ -42,141 +41,81 @@ nav {
 }
 
 nav a {
-    text-decoration: none;
-    color: #ff7f50;
     margin: 0 15px;
     font-weight: bold;
-    transition: color 0.3s;
+    font-size: 1.1em;
 }
 
-nav a:hover {
-    color: #ff4500; /* darker coral on hover */
-}
-
-/* ------------------------------
-   Hero Section
---------------------------------*/
-.hero {
-    background-color: #fff0f5; /* very light lavender */
+/* Sections */
+section {
+    padding: 40px 20px;
     text-align: center;
-    padding: 50px 20px;
 }
 
-.hero h2 {
-    font-size: 2em;
+section h2 {
+    color: #ff7f50;
     margin-bottom: 20px;
-    color: #ff69b4; /* pinkish for fun */
 }
 
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
-.hero button {
-    background-color: #ff7f50;
-    color: white;
-    border: none;
-    padding: 15px 25px;
+section p, section ul, section li {
     font-size: 1em;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s;
 }
 
-.hero button:hover {
-    background-color: #ff4500;
-}
-
-/* ------------------------------
-   Features Section
---------------------------------*/
+/* Features / Cards */
 .features {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 50px 20px;
     gap: 20px;
+    margin-top: 30px;
 }
 
 .feature {
-    background-color: #fff8dc; /* light creamy */
+    background: #fff0d4;
     border-radius: 12px;
     padding: 20px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
 .feature:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
-.feature img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 15px;
+/* Buttons */
+button {
+    background: #ff7f50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
 }
 
-.feature h3 {
-    margin-bottom: 10px;
-    color: #ff7f50;
+button:hover {
+    background: #ff4500;
 }
 
-.feature p {
-    color: #555;
-}
-
-/* ------------------------------
-   About & Contact Sections
---------------------------------*/
-.about, .contact {
-    padding: 50px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.about h2, .contact h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #ff69b4;
-}
-
-.about p, .contact p {
-    font-size: 1.1em;
-    margin-bottom: 15px;
-}
-
-/* Links in contact */
-.contact a {
-    color: #ff7f50;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact a:hover {
-    color: #ff4500;
-}
-
-/* ------------------------------
-   Footer
---------------------------------*/
+/* Footer */
 footer {
-    background-color: #ffefd5;
     text-align: center;
     padding: 20px;
-    border-top: 2px solid #ffd700;
-    margin-top: 50px;
+    background: #ffdaae;
+    margin-top: 40px;
 }
 
-/* ------------------------------
-   Responsive Design
---------------------------------*/
-@media (max-width: 900px) {
+/* Responsive Design */
+@media (max-width: 768px) {
     .features {
         flex-direction: column;
         align-items: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
     }
 }
