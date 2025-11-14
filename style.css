@@ -38,7 +38,7 @@ header img {
 
 header h1 {
     font-size: 2rem;
-    color: #ff8c42;
+    color: #ff8c42; /* header title color */
     margin-left: 10px;
 }
 
@@ -68,6 +68,19 @@ nav a:hover {
     padding: 60px 20px;
     border-radius: 15px;
     display: inline-block;
+}
+
+/* Section Headings in Orange */
+.hero h2,
+.about h2,
+.contact h2 {
+    color: #ff8c42; /* orange headings */
+}
+
+.hero h2:hover,
+.about h2:hover,
+.contact h2:hover {
+    color: #e6731f; /* darker orange on hover */
 }
 
 .hero h2 {
