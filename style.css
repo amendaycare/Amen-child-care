@@ -38,7 +38,7 @@ header img {
 
 header h1 {
     font-size: 2rem;
-    color: #ff6f61;
+    color: #ff8c42;
     margin-left: 10px;
 }
 
@@ -51,7 +51,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff6f61;
+    color: #ff8c42;
 }
 
 /* Hero section */
@@ -81,7 +81,7 @@ nav a:hover {
 }
 
 .hero button {
-    background-color: #ff6f61;
+    background-color: #ff8c42;
     color: #fff;
     padding: 14px 35px;
     border: none;
@@ -92,7 +92,7 @@ nav a:hover {
 }
 
 .hero button:hover {
-    background-color: #e85c50;
+    background-color: #e6731f;
     transform: translateY(-2px);
 }
 
@@ -127,7 +127,7 @@ nav a:hover {
 }
 
 .feature h3 {
-    color: #ff6f61;
+    color: #ff8c42;
     margin: 15px 0;
 }
 
@@ -163,13 +163,13 @@ nav a:hover {
 }
 
 .contact-info a {
-    color: #ff6f61;
+    color: #ff8c42;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .contact-info a:hover {
-    color: #e85c50;
+    color: #e6731f;
 }
 
 /* Footer */
