@@ -28,7 +28,7 @@
   <!-- HERO (video background) -->
   <section class="hero">
     <video autoplay muted loop class="hero-video" playsinline>
-      <source src="videos/amendaycare.mov" type="video/mp4">
+      <source src="videos/amendaycare.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
@@ -113,7 +113,6 @@
     <p class="section-sub">Moments from our daily learning & play.</p>
 
     <div class="gallery-grid">
-      <!-- thumbnails open modal -->
       <img src="images/playtime1.jpg" alt="Playtime 1" class="gallery-thumb" data-full="images/playtime1.jpg">
       <img src="images/playtime2.jpg" alt="Playtime 2" class="gallery-thumb" data-full="images/playtime2.jpg">
       <img src="images/playtime3.jpg" alt="Playtime 3" class="gallery-thumb" data-full="images/playtime3.jpg">
@@ -122,14 +121,14 @@
       <img src="images/learning3.jpg" alt="Learning 3" class="gallery-thumb" data-full="images/learning3.jpg">
       <img src="images/learning4.jpg" alt="Learning 4" class="gallery-thumb" data-full="images/learning4.jpg">
     </div>
-    <!-- modal -->
+
     <div id="lightbox" class="lightbox" aria-hidden="true">
       <button id="lb-close" class="lb-close" aria-label="Close">×</button>
       <img id="lb-img" src="" alt="">
     </div>
   </section>
 
-  <!-- MEET THE STAFF -->
+  <!-- STAFF -->
   <section class="section container fade-up">
     <h2 class="section-title">Meet the Team</h2>
     <div class="grid staff">
@@ -172,7 +171,7 @@
     <div class="faq">
       <details class="card">
         <summary>Do you accept DHS?</summary>
-        <p>Yes — we accept DHS and private enrollments. Contact us for assistance with paperwork.</p>
+        <p>Yes — we accept DHS and private enrollments.</p>
       </details>
       <details class="card">
         <summary>What are your hours?</summary>
@@ -180,7 +179,7 @@
       </details>
       <details class="card">
         <summary>Are meals provided?</summary>
-        <p>Yes, nutritious meals and snacks are included for full-day programs.</p>
+        <p>Yes, nutritious meals and snacks are included.</p>
       </details>
     </div>
   </section>
@@ -193,9 +192,8 @@
     </div>
   </footer>
 
-  <!-- SCRIPTS: sticky header, mobile toggle, gallery modal, simple fade-in on load -->
+  <!-- SCRIPTS -->
   <script>
-    // Sticky header on scroll
     (function(){
       const header = document.getElementById('site-header');
       window.addEventListener('scroll', ()=> {
@@ -203,34 +201,35 @@
         else header.classList.remove('sticky');
       });
 
-      // mobile nav toggle (simple)
       const mobileToggle = document.getElementById('mobile-nav-toggle');
       const nav = document.querySelector('.nav');
       mobileToggle.addEventListener('click', ()=> {
         nav.classList.toggle('open');
       });
 
-      // Gallery lightbox
       const thumbs = document.querySelectorAll('.gallery-thumb');
       const lightbox = document.getElementById('lightbox');
       const lbImg = document.getElementById('lb-img');
       const lbClose = document.getElementById('lb-close');
 
       thumbs.forEach(t => t.addEventListener('click', ()=> {
-        const src = t.dataset.full || t.src;
-        lbImg.src = src;
+        lbImg.src = t.dataset.full || t.src;
         lightbox.style.display = 'flex';
         lightbox.setAttribute('aria-hidden','false');
       }));
+
       lbClose.addEventListener('click', ()=> {
         lightbox.style.display = 'none';
         lightbox.setAttribute('aria-hidden','true');
       });
+
       lightbox.addEventListener('click', (e)=> {
-        if(e.target === lightbox) { lightbox.style.display='none'; lightbox.setAttribute('aria-hidden','true'); }
+        if(e.target === lightbox) { 
+          lightbox.style.display='none'; 
+          lightbox.setAttribute('aria-hidden','true'); 
+        }
       });
 
-      // simple fade-in animations on load (adds 'visible' to animated items)
       window.addEventListener('load', ()=> {
         document.querySelectorAll('.fade-up').forEach((el, i)=>{
           setTimeout(()=> el.classList.add('visible'), i*120);
