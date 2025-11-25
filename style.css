@@ -26,6 +26,8 @@ body{
   width:90%;
   max-width:var(--container);
   margin:0 auto;
+  padding-left:15px;
+  padding-right:15px;
 }
 
 /* header */
@@ -134,8 +136,17 @@ body{
 .lb-close{ position:absolute; top:18px; right:18px; z-index:1001; background:transparent; border:0; color:#fff; font-size:2rem; cursor:pointer; }
 
 /* STAFF */
-.staff-card{ text-align:center; padding:18px; }
-.avatar{ font-size:2.2rem; margin-bottom:8px; }
+.staff-hero{ display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+.staff-avatar img{
+  width:160px;
+  height:160px;
+  object-fit:cover;
+  border-radius:16px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  border:4px solid var(--accent);
+}
+.staff-info h4{ margin:0 0 6px 0; color:#111; }
+.staff-info p{ margin:0; color:#555; line-height:1.5; }
 
 /* TESTIMONIALS */
 .testimonials{ display:flex; gap:18px; flex-wrap:wrap; }
@@ -149,7 +160,6 @@ body{
 .footer{ background:#fff; padding:22px 0; margin-top:20px; text-align:center; box-shadow:0 -1px 0 rgba(0,0,0,0.03); }
 
 /* small utilities */
-.container{ padding-left:15px; padding-right:15px; }
 .link{ color:var(--accent); text-decoration:none; }
 
 /* ANIMATIONS - simple fade-up */
